@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/style.css">
     <title>CinePair</title>
 </head>
 
@@ -17,15 +18,17 @@
             decide what your next movie night should be.</p>
     </header>
 
-    <main>
-        <div id="searchbox1">
+    <main class="row">
+        <div id="searchbox1" class="column">
+            <h2>Search for a Movie Here</h2>
             <input type="text">
             <button>Search</button>
 
             <div id="result1"></div>
         </div>
 
-        <div id="searchbox2">
+        <div id="searchbox2" class="column">
+            <h2>Search for a Movie Here</h2>
             <input type="text">
             <button>Search</button>
 
@@ -33,10 +36,15 @@
         </div>
     </main>
 
-    <footer>
-        <p>Thank you for using CinePair!</p>
-        <p>Developed by Children of the Watch</p>
-    </footer>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            Thank you for using CinePair
+          </p>
+          <p>Developed by Children of the Watch</p>
+        </div>
+      </footer>
 
     <script src="assets/script.js"></script>
 </body>
