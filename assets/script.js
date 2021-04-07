@@ -1,4 +1,5 @@
 var omdbKey = "f6c265c9"
+var tmdbKey = "f49057947bb2e484b64e96b04924b0e1"
 var searchBtn1 = document.getElementById("search-btn1")
 var searchBtn2 = document.getElementById("search-btn2")
 var result1 = document.getElementById("result1")
@@ -31,7 +32,7 @@ function searchValue2() {
 }
 
 function getLeftStatsOmdb(searchValue1) {
-    // var omdbURL = "https://api.themoviedb.org/3/movie/" + searchValue1 + "?api_key=" + omdbKey;
+    
     var omdbURL = "http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + searchValue1;
 
     fetch(omdbURL)
@@ -99,7 +100,28 @@ function getLeftStatsOmdb(searchValue1) {
             moviePlotEl.textContent = "Plot: " + moviePlot;
             result1.append(moviePlotEl);
 
+            console.log("STARTING TO BRING IN THE OTHER API")
+            var tmdbID = data.imdbID;
+            console.log(tmdbID)
+            var tmdbURL = "https://api.themoviedb.org/3/movie/" + tmdbID + "?api_key=" + tmdbKey;
+            console.log(tmdbURL)
 
+            fetch(tmdbURL)
+                .then(function (response) {
+                    return response.json()
+                }).then(function (newData) {
+                    console.log("THIS IS THE NEW API DATA")
+                    console.log(newData);
+
+                    var moviePoster = newData.poster_path;
+                    console.log(moviePoster);
+
+                    var posterPath = "https://image.tmdb.org/t/p/w185/" + moviePoster;
+
+                    var moviePosterEl = document.createElement("img");
+                    moviePosterEl.setAttribute("src", posterPath);
+                    result1.append(moviePosterEl);
+                })
         })
 
         
@@ -174,7 +196,28 @@ function getRightStatsOmdb(searchValue2) {
             moviePlotEl.textContent = "Plot: " + moviePlot;
             result2.append(moviePlotEl);
 
+            console.log("STARTING TO BRING IN THE OTHER API")
+            var tmdbID = data.imdbID;
+            console.log(tmdbID)
+            var tmdbURL = "https://api.themoviedb.org/3/movie/" + tmdbID + "?api_key=" + tmdbKey;
+            console.log(tmdbURL)
 
+            fetch(tmdbURL)
+                .then(function (response) {
+                    return response.json()
+                }).then(function (newData) {
+                    console.log("THIS IS THE NEW API DATA")
+                    console.log(newData);
+
+                    var moviePoster = newData.poster_path;
+                    console.log(moviePoster);
+
+                    var posterPath = "https://image.tmdb.org/t/p/w185/" + moviePoster;
+
+                    var moviePosterEl = document.createElement("img");
+                    moviePosterEl.setAttribute("src", posterPath);
+                    result2.append(moviePosterEl);
+                })
         })
 
         
