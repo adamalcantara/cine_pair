@@ -63,11 +63,25 @@ function getLeftStatsOmdb(searchValue1) {
             ratedEl.textContent = "Rated: " + rated;
             result1.append(ratedEl);
 
-            var ratings = data.Ratings[0].Value;
-            console.log(ratings);
+            var ratingIMDB = data.Ratings[0].Value;
+            console.log(ratingIMDB);
 
             var ratingsEl = document.createElement("p");
-            ratingsEl.textContent = ratings;
+            ratingsEl.textContent = "IMDb Rating: " + ratingIMDB;
+            result1.append(ratingsEl);
+
+            var ratingRT = data.Ratings[1].Value;
+            console.log(ratingRT);
+
+            var ratingsEl = document.createElement("p");
+            ratingsEl.textContent = "Rotten Tomatoes Rating: " + ratingRT;
+            result1.append(ratingsEl);
+
+            var ratingMC = data.Ratings[2].Value;
+            console.log(ratingMC);
+
+            var ratingsEl = document.createElement("p");
+            ratingsEl.textContent = "Metacritic Rating: " + ratingMC;
             result1.append(ratingsEl);
 
             var runTime = data.Runtime;
@@ -124,11 +138,25 @@ function getRightStatsOmdb(searchValue2) {
             ratedEl.textContent = "Rated: " + rated;
             result2.append(ratedEl);
 
-            var ratings = data.Ratings;
-            console.log(ratings);
+            var ratingIMDB = data.Ratings[0].Value;
+            console.log(ratingIMDB);
 
             var ratingsEl = document.createElement("p");
-            ratingsEl.textContent = ratings;
+            ratingsEl.textContent = "IMDb Rating: " + ratingIMDB;
+            result2.append(ratingsEl);
+
+            var ratingRT = data.Ratings[1].Value;
+            console.log(ratingRT);
+
+            var ratingsEl = document.createElement("p");
+            ratingsEl.textContent = "Rotten Tomatoes Rating: " + ratingRT;
+            result2.append(ratingsEl);
+
+            var ratingMC = data.Ratings[2].Value;
+            console.log(ratingMC);
+
+            var ratingsEl = document.createElement("p");
+            ratingsEl.textContent = "Metacritic Rating: " + ratingMC;
             result2.append(ratingsEl);
 
             var runTime = data.Runtime;
