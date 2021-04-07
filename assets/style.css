@@ -2,6 +2,17 @@
     font-family: 'Oswald', sans-serif;
 }
 
+.section {
+    background-color: #495b71 i !important;
+}
+
+img { 
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
 h1 {
     text-align: center;
     font-weight: bold;
@@ -35,6 +46,7 @@ main {
 }
 
 footer {
+    background-color: #495b71 i !important;
     position: relative;
     bottom: 0;
     width: 100%;
