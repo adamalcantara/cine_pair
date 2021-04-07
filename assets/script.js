@@ -212,9 +212,11 @@ function getRightStatsOmdb(searchValue2) {
                     var moviePoster = newData.poster_path;
                     console.log(moviePoster);
 
+                    var posterPath = "https://image.tmdb.org/t/p/w185/" + moviePoster;
+
                     var moviePosterEl = document.createElement("img");
-                    moviePosterEl.setAttribute("src", moviePoster);
-                    result1.append(moviePosterEl);
+                    moviePosterEl.setAttribute("src", posterPath);
+                    result2.append(moviePosterEl);
                 })
         })
 
