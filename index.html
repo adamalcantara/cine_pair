@@ -16,7 +16,7 @@
 
 <body>
     <header class="section">
-        <img src="./assets/logo.png" alt="CinePare Logo">
+        <img src="./assets/logo.png" id="logo" alt="CinePare Logo">
         <p>CinePare will help you compare the films you're interested in to help you
             decide what your next movie night should be.</p>
     </header>
@@ -27,7 +27,7 @@
             <input type="text" id="search-box1">
             <button id="search-btn1">Search</button>
 
-            <div id="result1"></div>
+            <div id="poster1"></div>
         </div>
 
         <div id="searchbox2" class="column">
@@ -35,7 +35,7 @@
             <input type="text" id="search-box2">
             <button id="search-btn2">Search</button>
 
-            <div id="result2"></div>
+            <div id="poster2"></div>
         </div>
     </main>
 
@@ -43,6 +43,16 @@
     <section>
         <button id="compareBtn" style="size: 20px;">Compare</button>
     </section>
+
+    <div class="row">
+        <div id="statsbox1" class="column">
+            <div id="result1" class="result1"></div>
+        </div>
+
+        <div id="statsbox2" class="column">
+            <div id="result2" class="result2"></div>
+        </div>
+    </div>
 
 
     <footer class="footer">

@@ -4,10 +4,15 @@ var searchBtn1 = document.getElementById("search-btn1")
 var searchBtn2 = document.getElementById("search-btn2")
 var result1 = document.getElementById("result1")
 var result2 = document.getElementById("result2")
+var poster1 = document.getElementById("poster1")
+var poster2 = document.getElementById("poster2")
 
 function searchValue1() {
     var searchValue1 = document.getElementById("search-box1").value;
     console.log(searchValue1)
+
+    result1.innerHTML = "";
+    poster1.innerHTML = "";
 
     if (searchValue1 == "") {
         alert("Must input a search term");
@@ -21,6 +26,9 @@ function searchValue1() {
 function searchValue2() {
     var searchValue2 = document.getElementById("search-box2").value;
     console.log(searchValue2)
+
+    result2.innerHTML = "";
+    poster2.innerHTML = "";
 
     if (searchValue2 == "") {
         alert("Must input a search term");
@@ -47,7 +55,7 @@ function getLeftStatsOmdb(searchValue1) {
             if (movieName == undefined) {
                 var movieNameErr = document.createElement("h3");
                 movieNameErr.textContent = "No Title By That Name. Please Try Again.";
-                result1.append(movieNameErr);
+                poster1.append(movieNameErr);
             }
 
             console.log("THE MOVIE TITLE");
@@ -135,7 +143,13 @@ function getLeftStatsOmdb(searchValue1) {
 
                     var moviePosterEl = document.createElement("img");
                     moviePosterEl.setAttribute("src", posterPath);
-                    result1.append(moviePosterEl);
+                    moviePosterEl.setAttribute("class", "poster1")
+                    poster1.append(moviePosterEl);
+
+                    var movieMarqueeEl = document.createElement("img");
+                    movieMarqueeEl.setAttribute("src", "./assets/marquee.png")
+                    movieMarqueeEl.setAttribute("class", "marquee1")
+                    poster1.append(movieMarqueeEl);
                 })
         })
 
@@ -158,7 +172,7 @@ function getRightStatsOmdb(searchValue2) {
             if (movieName == undefined) {
                 var movieNameErr = document.createElement("h3");
                 movieNameErr.textContent = "No Title By That Name. Please Try Again.";
-                result2.append(movieNameErr);
+                poster2.append(movieNameErr);
             }
 
             console.log("THE MOVIE TITLE");
@@ -246,16 +260,30 @@ function getRightStatsOmdb(searchValue2) {
 
                     var moviePosterEl = document.createElement("img");
                     moviePosterEl.setAttribute("src", posterPath);
-                    result2.append(moviePosterEl);
+                    moviePosterEl.setAttribute("class", "poster2")
+                    poster2.append(moviePosterEl);
+
+                    var movieMarqueeEl = document.createElement("img");
+                    movieMarqueeEl.setAttribute("src", "./assets/marquee.png")
+                    movieMarqueeEl.setAttribute("class", "marquee2")
+                    poster2.append(movieMarqueeEl);
                 })
         })
 
         
 }
 
+function compareButton() {
+    var comparison1 = document.getElementById("result1")
+    comparison1.removeAttribute("class", "result1")
+
+    var comparison2 = document.getElementById("result2")
+    comparison2.removeAttribute("class", "result2")
+}
+
 
 
 searchBtn1.addEventListener("click", searchValue1);
 searchBtn2.addEventListener("click", searchValue2);
-compareBtn.addEventListener("click", );
+compareBtn.addEventListener("click", compareButton);
 
