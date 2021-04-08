@@ -44,7 +44,7 @@ function searchValue2() {
 
 function getLeftStatsOmdb(searchValue1) {
     
-    var omdbURL = "http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + searchValue1;
+    var omdbURL = "https://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + searchValue1;
 
     fetch(omdbURL)
         .then(function (response) {
@@ -162,7 +162,7 @@ function getLeftStatsOmdb(searchValue1) {
 
 function getRightStatsOmdb(searchValue2) {
     // var omdbURL = "https://api.themoviedb.org/3/movie/" + searchValue1 + "?api_key=" + omdbKey;
-    var omdbURL = "http://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + searchValue2;
+    var omdbURL = "https://www.omdbapi.com/?apikey=" + omdbKey + "&t=" + searchValue2;
 
     fetch(omdbURL)
         .then(function (response) {
