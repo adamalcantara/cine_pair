@@ -156,8 +156,10 @@ section {
     margin-top: 5px;
     color: lightgray;
     padding-top: 20px;
-    padding-bottom: 30px;
+
+    padding-bottom: 20px;
     font-size: 23px;
+
 }
 
 .result1 {
