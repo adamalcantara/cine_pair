@@ -1,0 +1,75 @@
+:root {
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: lightsteelblue;
+}
+
+header {
+    background-color: #495b71 !important;
+}
+
+img { 
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+header p {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px darkslategrey;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+#searchbox1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#searchbox2 {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+main {
+    min-height: 500px;
+}
+
+section {
+    height: 80px;
+    position: relative;
+    
+  }
+
+#compareBtn {
+    
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+
+footer {
+    background-color: #495b71 !important;
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+    color: lightgray;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
