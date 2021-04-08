@@ -208,6 +208,12 @@ h1 {
     width: 40px;
 }
 
+@media screen and (max-width: 980px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .slatebtn {
         margin: 0;
