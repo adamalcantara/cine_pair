@@ -15,8 +15,7 @@ function searchValue1() {
     poster1.innerHTML = "";
 
     if (searchValue1 == "") {
-        alert("Must input a search term");
-        return false
+        var noEntry1 = document.createElement("h3");
     }
 
     getLeftStatsOmdb(searchValue1);
@@ -31,8 +30,7 @@ function searchValue2() {
     poster2.innerHTML = "";
 
     if (searchValue2 == "") {
-        alert("Must input a search term");
-        return false
+        var noEntry2 = document.createElement("h3");
     }
 
     getRightStatsOmdb(searchValue2);
@@ -54,7 +52,8 @@ function getLeftStatsOmdb(searchValue1) {
             var movieName = data.Title;
             if (movieName == undefined) {
                 var movieNameErr = document.createElement("h3");
-                movieNameErr.textContent = "No Title By That Name. Please Try Again.";
+                movieNameErr.textContent = "Please, Sir, I need an ACTUAL search term!";
+
                 poster1.append(movieNameErr);
             }
 
@@ -171,7 +170,7 @@ function getRightStatsOmdb(searchValue2) {
             var movieName = data.Title;
             if (movieName == undefined) {
                 var movieNameErr = document.createElement("h3");
-                movieNameErr.textContent = "No Title By That Name. Please Try Again.";
+                movieNameErr.textContent = "Please, Sir, I need an ACTUAL search term!";
                 poster2.append(movieNameErr);
             }
 

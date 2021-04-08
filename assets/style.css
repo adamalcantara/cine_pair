@@ -129,14 +129,14 @@ section {
     
 }
 
-footer {
+.footer {
     background-color: #495b71 !important;
     position: relative;
     width: 100%;
     margin-top: 5px;
     color: lightgray;
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .result1 {
