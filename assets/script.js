@@ -42,7 +42,14 @@ function getLeftStatsOmdb(searchValue1) {
             console.log("THIS IS THE DATA")
             console.log(data);
 
+            //Show bad search comment when undefined result is yielded
             var movieName = data.Title;
+            if (movieName == undefined) {
+                var movieNameErr = document.createElement("h3");
+                movieNameErr.textContent = "No Title By That Name. Please Try Again.";
+                result1.append(movieNameErr);
+            }
+
             console.log("THE MOVIE TITLE");
             console.log(movieName);
 
@@ -50,14 +57,22 @@ function getLeftStatsOmdb(searchValue1) {
             movieNameEl.textContent = movieName;
             result1.append(movieNameEl);
 
+            //Hide Released Element when a bad search is yielded
             var released = data.Released;
+            if (released == undefined) {
+                var releaseErr = document.getElementById(releasedEl).style.display = 'block';
+            }
             console.log(released);
-
+                        
             var releasedEl = document.createElement("p");
             releasedEl.textContent = "Released: " + released;
             result1.append(releasedEl);
 
+            //Hide Rated Element when a bad search is yielded
             var rated = data.Rated;
+            if (rated == undefined) {
+                var ratedErr = document.getElementById(ratedEl).style.display = 'block';
+            }
             console.log(rated);
 
             var ratedEl = document.createElement("p");
@@ -138,7 +153,14 @@ function getRightStatsOmdb(searchValue2) {
             console.log("THIS IS THE DATA")
             console.log(data);
 
+            //Show bad search comment when undefined result is yielded
             var movieName = data.Title;
+            if (movieName == undefined) {
+                var movieNameErr = document.createElement("h3");
+                movieNameErr.textContent = "No Title By That Name. Please Try Again.";
+                result2.append(movieNameErr);
+            }
+
             console.log("THE MOVIE TITLE");
             console.log(movieName);
 
@@ -146,14 +168,22 @@ function getRightStatsOmdb(searchValue2) {
             movieNameEl.textContent = movieName;
             result2.append(movieNameEl);
 
+            //Hide Released Element when a bad search is yielded
             var released = data.Released;
+            if (released == undefined) {
+                var releaseErr = document.getElementById(releasedEl).style.display = 'block';
+            }
             console.log(released);
 
             var releasedEl = document.createElement("p");
             releasedEl.textContent = "Released: " + released;
             result2.append(releasedEl);
 
+            //Hide Rated Element when a bad search is yielded
             var rated = data.Rated;
+            if (rated == undefined) {
+                var ratedErr = document.getElementById(ratedEl).style.display = 'block';
+            }
             console.log(rated);
 
             var ratedEl = document.createElement("p");
