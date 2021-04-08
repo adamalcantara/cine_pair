@@ -6,9 +6,11 @@ var result1 = document.getElementById("result1")
 var result2 = document.getElementById("result2")
 var poster1 = document.getElementById("poster1")
 var poster2 = document.getElementById("poster2")
+var slateBtn = document.querySelector(".slatebtn")
 
 function searchValue1() {
     var searchValue1 = document.getElementById("search-box1").value;
+    var comparison1 = document.getElementById("result1")
     console.log(searchValue1)
 
     result1.innerHTML = "";
@@ -17,13 +19,15 @@ function searchValue1() {
     if (searchValue1 == "") {
         var noEntry1 = document.createElement("h3");
     }
-
+    
     getLeftStatsOmdb(searchValue1);
     document.getElementById("search-box1").value = "";
+    comparison1.setAttribute("class", "result1");
 }
 
 function searchValue2() {
     var searchValue2 = document.getElementById("search-box2").value;
+    var comparison2 = document.getElementById("result2")
     console.log(searchValue2)
 
     result2.innerHTML = "";
@@ -35,6 +39,7 @@ function searchValue2() {
 
     getRightStatsOmdb(searchValue2);
     document.getElementById("search-box2").value = "";
+    comparison2.setAttribute("class", "result2");
 }
 
 function getLeftStatsOmdb(searchValue1) {
@@ -272,17 +277,26 @@ function getRightStatsOmdb(searchValue2) {
         
 }
 
-function compareButton() {
+function compareButton(e) {
+    console.log(e);
     var comparison1 = document.getElementById("result1")
     comparison1.removeAttribute("class", "result1")
 
     var comparison2 = document.getElementById("result2")
     comparison2.removeAttribute("class", "result2")
+
+    slateBtn.setAttribute("src", "./assets/button2.png")
+}
+
+function resetButton () {
+    slateBtn.setAttribute("src", "./assets/button1.png")
 }
 
 
 
 searchBtn1.addEventListener("click", searchValue1);
 searchBtn2.addEventListener("click", searchValue2);
-compareBtn.addEventListener("click", compareButton);
+// compareBtn.addEventListener("click", compareButton);
+slateBtn.addEventListener("mousedown", compareButton);
+slateBtn.addEventListener("mouseup", resetButton);
 

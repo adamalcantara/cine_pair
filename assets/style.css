@@ -53,6 +53,7 @@ h2 {
     font-size: 20px;
     margin-bottom: 7px;
     text-align: center;
+    font-family: 'Limelight', cursive;
 }
 
 .row {
@@ -99,6 +100,7 @@ section {
     z-index: 1000;
     width: 234px;
     height: 327px;
+    box-shadow: 0px 0px 10px 1px grey;
 }
 
 #poster2 {
@@ -116,9 +118,9 @@ section {
     z-index: 1000;
     width: 234px;
     height: 327px;
-}
+    box-shadow: 0px 0px 10px 1px grey;}
 
-#compareBtn {
+/* #compareBtn {
     
     margin: 0;
     position: absolute;
@@ -127,6 +129,24 @@ section {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     
+} */
+
+.slatebtn {
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 120px;
+}
+
+.slatebtn:hover {
+    cursor: pointer;
+}
+
+.slatebtn:active {
+
 }
 
 .footer {
@@ -136,7 +156,10 @@ section {
     margin-top: 5px;
     color: lightgray;
     padding-top: 20px;
+
     padding-bottom: 20px;
+    font-size: 23px;
+
 }
 
 .result1 {
@@ -146,3 +169,41 @@ section {
 .result2 {
     display: none;
 }
+
+#result1 {
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px black;
+    border-style: dotted;
+    padding: 10px;
+}
+
+#result2 {
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px black;
+    border-style: dotted;
+    padding: 10px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 75px;
+    font-family: 'Limelight', cursive;
+}
+
+#result1 p {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+#result2 p {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
