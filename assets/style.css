@@ -145,10 +145,6 @@ section {
     cursor: pointer;
 }
 
-.slatebtn:active {
-
-}
-
 .footer {
     background-color: #495b71 !important;
     position: relative;
@@ -210,4 +206,16 @@ h1 {
 #closing {
     height: 40px;
     width: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .slatebtn {
+        margin: 0;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -5%);
+        width: 120px;
+    }
 }
