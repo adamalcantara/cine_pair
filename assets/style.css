@@ -2,6 +2,7 @@
     font-family: 'Oswald', sans-serif;
 }
 
+
 body {
     background-color: lightsteelblue;
 }
@@ -22,6 +23,7 @@ header p {
     font-size: 25px;
     color: white;
     font-weight: bold;
+
     text-shadow: 2px 2px darkslategrey;
 }
 
@@ -46,6 +48,7 @@ header p {
 main {
     min-height: 500px;
 }
+
 
 section {
     height: 80px;

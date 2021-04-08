@@ -255,7 +255,7 @@ function getRightStatsOmdb(searchValue2) {
 
 
 
-
 searchBtn1.addEventListener("click", searchValue1);
 searchBtn2.addEventListener("click", searchValue2);
 compareBtn.addEventListener("click", );
+
