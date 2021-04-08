@@ -218,4 +218,42 @@ h1 {
         transform: translate(-50%, -5%);
         width: 120px;
     }
+
+    #result1 {
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 10px black;
+        border-style: dotted;
+        padding: 10px;
+    }
+
+    #result2 {
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 10px black;
+        border-style: dotted;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    #result1 p {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    
+    #result2 p {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
 }
