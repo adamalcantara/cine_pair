@@ -280,4 +280,35 @@ h1 {
     h1 {
         font-size: 20px;
     }
+
+    .poster1 {
+        width: 40%;
+    }
+    
+    .marquee1 {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .poster1 {
+        width: 30%;
+        margin-top: 10px;
+    }
+    
+    .marquee1 {
+        width: 130px;
+        height: 180px;
+    }
+
+    .poster2 {
+        width: 30%;
+        margin-top: 10px;
+    }
+    
+    .marquee2 {
+        width: 130px;
+        height: 180px;
+    }
 }
