@@ -263,3 +263,21 @@ h1 {
         font-size: 20px;
     }
 }
+
+@media screen and (max-width: 414px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    #searchbox1 {
+        width: 40%;
+    }
+
+    #searchbox2 {
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
