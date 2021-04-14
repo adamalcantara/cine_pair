@@ -1,5 +1,7 @@
 # cine_pare
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 https://adamalcantara.github.io/cine_pair/
 
 This was built using HTML, CSS, JavaScript, and Bulma, along with the OMDb API and the TMDb API.
