@@ -61,7 +61,10 @@ h2 {
     flex-direction: row;
     align-items: flex-start;
     margin-top: 40px;
+    min-height: 500px;
 }
+
+
 
 #searchbox1 {
     display: flex;
